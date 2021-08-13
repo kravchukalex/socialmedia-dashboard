@@ -1,0 +1,73 @@
+input[type="checkbox"] {
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 45px;
+	height:23px;
+	background:  linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+	display: block;
+	border-radius:25px;
+	position: relative;
+    margin: 0
+}
+
+label:after {
+	content: "";
+	position: absolute;
+	top:3px;
+	left: 3.25px;
+	width: 16.5px;
+	height:16.5px;
+	background: hsl(232, 19%, 15%);
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+        background: hsl(230, 22%, 74%);
+}
+
+input:checked + label:hover {
+    background:  linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+input:checked + label:after {
+    background: #fff;
+}
+
+input:checked + label:after {
+	left: calc(100% - 4px);
+	transform: translateX(-100%);
+}
+
+.textDarkToogle {
+    color: hsl(228, 34%, 66%)
+}
+
+.textDarkToogle:hover {
+    color: hsl(0, 0%, 100%)
+}
+
+.textLightToogle {
+    color: hsl(228, 12%, 44%)
+}
+
+
+.buttonDark {
+    background-color: hsl(228, 28%, 20%);
+}
+.buttonDark:hover {
+    background: hsl(228, 28%, 25%);
+}
+
+.buttonLight {
+    background: hsl(227, 47%, 96%);
+}
+.buttonLight:hover {
+    background: hsl(227, 47%, 91%);
+}
